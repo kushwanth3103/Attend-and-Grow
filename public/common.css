@@ -1,0 +1,30 @@
+#head{
+    background-color: #073B4C;
+    position: relative;
+    height:100px;
+}
+#eventitem{
+    border-width:2px;
+    border-style:solid;
+    border-color:#0077B6;
+    border-radius:10px;
+    margin:10px;
+    padding:10px;
+    background-color: aliceblue; 
+    margin: 30px;
+}
+#eventitem:hover{
+    box-shadow: 0 0 23px rgb(88, 66, 141);
+    border-radius: 9px;
+}
+.eventButton{
+    background-color: #023E8A;
+    color: white;
+}
+.eventtag{
+    background-color: #0077B6;
+    color: white;
+    border-radius:5px;
+    margin:5px;
+    padding: 5px;
+}
