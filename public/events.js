@@ -1,4 +1,21 @@
 $(document).ready(function(){
+
+    var data;
+    function ajax_refresh()
+    {
+        var xmlhhtp;
+        if(window.XMLHttpRequest)
+        {
+            xmlhhtp=new XMLHttpRequest();
+        }
+        xmlhhtp.onreadystatechange=function(){
+        if(xmlhhtp.readyState==4 && xmlhhtp.status==200)
+        {
+
+        }
+        xmlhhtp.open("GET","/events",true)
+        xmlhhtp.send()
+    }
     var eventsList=[{title:"Event 1",club:"Club 1",desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit Consectetur nisi, tempor pharetra id viverra. Urna sit porttitor arcu consectetur tincidunt feugiat a risus eleifend.",link:"",image:"",tags:["app","web"]},{title:"Event 2",club:"Club 2",desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit.Consectetur nisi, tempor pharetra id viverra. Urna sit porttitor arcu consectetur tincidunt feugiat a risus eleifend.",link:"",image:"",tags:["app","web"]},{title:"Event 3",club:"Club 3",desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit.Consectetur nisi, tempor pharetra id viverra. Urna sit porttitor arcu consectetur tincidunt feugiat a risus eleifend.",link:"",image:"",tags:["app","web"]}]
     for(var i=0;i<eventsList.length;i++){
         var div="<div id=eventitem class=row>"
@@ -14,5 +31,4 @@ $(document).ready(function(){
         $("#eventslist").append(div+image+tags+title+club+desc+button)
 
     }
-
-})
+});
