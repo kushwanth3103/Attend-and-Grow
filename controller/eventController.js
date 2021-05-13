@@ -29,7 +29,10 @@ const postEvent = (req,res)=>{
     }
 }
 
-const getAllEvents = (req,res)=>{}
+const getAllEvents = async (req,res)=>{
+    const data= await EVENT_OBJ.find().sort({_id:-1});
+    res.send(data)
+}
 
 const getEvent = (req,res)=>{}
 
