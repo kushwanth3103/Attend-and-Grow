@@ -28,6 +28,9 @@ const eventSchema = new Schema({
       type: String,
       required: true
     },
+    tags:{
+      type:String
+    },
     isUsingRegPortal:{
       type: Boolean,
       required: true

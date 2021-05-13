@@ -36,8 +36,13 @@
                 p=i;
             }
         }
+        
+        $('#subs').click(function(){
+            $('#tagsss').val(arr.join(','))
+        });
         setInterval(tags_arr,100);
         });
+        
     </script>
 </head>
 <body  style="background-color: rgb(129, 207, 243);">
@@ -107,6 +112,7 @@
                      <br>
                      <input type="button" value="add" id="add_tag">
                      <input type="button" value="delete" id="delete">
+                     <input type="text" name="tags" style="visibility: hidden;" id="tagsss">
                  </td>
              </tr>
              <tr>
@@ -121,7 +127,7 @@
              </tr>
              <tr >
                  <td colspan="3" class="padding_elm" >
-                     <input type="submit"  style="padding-left: 30px;padding-right: 30px;padding-top: 20px;padding-bottom: 20px;color: white;background-color: rgba(6, 214, 160, 0.65);box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border-color: whitesmoke;margin: 30px;margin-left: 40%;">
+                     <input type="submit" id="subs"  style="padding-left: 30px;padding-right: 30px;padding-top: 20px;padding-bottom: 20px;color: white;background-color: rgba(6, 214, 160, 0.65);box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border-color: whitesmoke;margin: 30px;margin-left: 40%;">
                  </td>
              </tr>
             </form>
