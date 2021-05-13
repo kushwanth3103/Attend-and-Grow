@@ -18,7 +18,7 @@ const storage=multer.diskStorage({
 const upload=multer({storage:storage});
 router.use(bodyParser.urlencoded({ extended: true }))
 const postEvent = (req,res)=>{
-    const details=new EVENT_OBJ({name:req.body.name ,description:req.body.description ,time:req.body.time,date:req.body.date,img:{data:fs.readFileSync(path.join(__dirname + '/Uploads/' + req.body.file.originalname)),contentType: 'image/png'},venue:req.body.venue ,isUsingRegPortal:req.body.isUsingRegPortal,regLink:req.body.regLink});
+    const details=new EVENT_OBJ({name:req.body.name ,description:req.body.description ,time:req.body.time,date:req.body.date,img:{data:fs.readFileSync(path.join('Uploads/' + req.file.filename)),contentType: 'image/png'},venue:req.body.venue ,isUsingRegPortal:req.body.isUsingRegPortal,regLink:req.body.regLink});
     try{
         details.save();
         res.send(details);
