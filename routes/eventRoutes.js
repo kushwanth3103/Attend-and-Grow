@@ -6,7 +6,7 @@ const {postEvent,getAllEvents,getEvent,getParticipants,register,upload} =require
 //routes post event
 router.post('/post_event',upload.single('image'), postEvent);
 //get list of event
-router.get('/',getAllEvents);
+router.get('/events',getAllEvents);
 //get particular event
 router.get('/:id',getEvent);
 //get list of participants(public)
